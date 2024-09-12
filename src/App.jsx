@@ -20,34 +20,34 @@ function App () {
           {
             title: 'Barista',
             duration: '20 January 19 - 20349',
-            details:[
+            details: [
               'Helped to coordinate the brewing of tea and selling of goods'
             ]
           },
           {
             title: 'Teaching Assistant',
             duration: '20 January 19 - 349',
-            details:[
+            details: [
               'Helped to educate some 10 mentees on Object Oriented Programming'
             ]
           }
         ]}
       />
 
-<Section
+      <Section
         title='Projects'
         sectionItems={[
           {
             title: 'OpenJio',
             duration: '20 January 19 - 20349',
-            details:[
+            details: [
               'Helped to coordinate the brewing of tea and selling of goods'
             ]
           },
           {
-            title: 'The Intern\'s Ship',
+            title: "The Intern's Ship",
             duration: '20 January 19 - 349',
-            details:[
+            details: [
               'Helped to educate some 10 mentees on Object Oriented Programming'
             ]
           }
