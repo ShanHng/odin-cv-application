@@ -8,8 +8,8 @@ function SectionItem ({ title, duration, itemDetails }) {
         <div className="section-item-duration">{duration}</div>
       </div>
       <ul className='section-item-detail-list'>
-        {itemDetails.map(item => (
-          <li className='section-item-detail'>
+        {itemDetails.map((item, index) => (
+          <li className='section-item-detail' key={index}>
             {item}
           </li>
         ))}
