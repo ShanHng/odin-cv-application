@@ -1,7 +1,9 @@
 import SectionItem from './SectionItem'
 import './Section.css'
+import { useState } from 'react'
 
 function Section ({ title, sectionItems }) {
+  const [isEdited, setIsEdited] = useState(false);
   return (
     <div className='section-container' style={ { display: ' flex' , justifyContent: 'center'  } }>
       <div className='width-70vw'>
