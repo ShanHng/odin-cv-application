@@ -9,6 +9,20 @@
 .cover-profile-pic {
     user-select: none;
 }
+.cover-name {
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+.cover-desc {
+    min-width: 100%;
+    resize: none;
+    flex-grow: 1;
+}
+.cover-info-edit-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 .btn-edit-icon {
     position: fixed;
     top: 2rem;

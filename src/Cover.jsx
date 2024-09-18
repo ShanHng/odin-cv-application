@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil, faClose, faCheck } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
-function Cover ({ name, aboutMe, contactNo, email, imgUrl }) {
+function Cover ({ name, description, imgUrl }) {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleConfirmEdit = () => {
@@ -18,10 +18,15 @@ function Cover ({ name, aboutMe, contactNo, email, imgUrl }) {
     <div className='cover-outer-container'>
       <div className='width-70vw' style={ { display: 'flex', justifyContent: 'space-between', gap: '2rem'}}>
         <div className='cover-info-container'>
-          <h1 className='cover-name'> {name} </h1>
-          <div className='cover-about-me'> {aboutMe} </div>
-          <div className='cover-contact-no'>{contactNo}</div>
-          <div className='cover-email'>{email}</div>
+          { isEditing 
+            ? <div className='cover-info-edit-container'>
+                <input type="text" className='cover-name' defaultValue={ name }></input>
+                <textarea className='cover-desc' defaultValue={ description }></textarea>
+              </div>
+            : <>
+                <h1 className='cover-name'> {name} </h1>
+                <div style={{whiteSpace: "pre-wrap"}} className='cover-desc'>{ description }</div>
+              </> }           
         </div>
         <img className='cover-profile-pic' src={imgUrl} height='400px'></img>
       </div>
